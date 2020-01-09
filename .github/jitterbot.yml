@@ -1,0 +1,35 @@
+add-milestone:
+  enabled: true
+  create: true
+add-release-label:
+  enabled: true
+  create: true
+  color: f7c2bb
+comment-jira-link:
+  enabled: true
+delete-merged-branch:
+  enabled: true
+  exclude:
+    - develop
+    - master
+    - release/*
+merge-pull-request:
+  enabled: true
+  label: ready to merge
+open-backmerge-pull:
+  enabled: true
+  baseBranch: develop
+post-build-message:
+  enabled: true
+  channel: cloud-apps-general
+  primary: Thomas Mercurio
+  app: Jitterbot Testing
+  environments:
+    - QA-Red
+    - QA-Green
+    - QA-Blue
+  cc:
+    - Hirad Pourtahmasbi
+update-jira-status:
+  enabled: true
+  component: jbcli
